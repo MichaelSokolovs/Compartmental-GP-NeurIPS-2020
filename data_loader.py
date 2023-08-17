@@ -13,6 +13,7 @@ def numpy_fill(arr):
 
 
 def get_intervention(country, standarize=False, smooth=True, legacy=False):
+
     csvs = [
         'c1_schoolclosing.csv',
         'c2_workplaceclosing.csv',
@@ -27,7 +28,6 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
         'h1_publicinfocampaign.csv',
         'h2_testingpolicy.csv'
     ] + ['c{}_flag.csv'.format(x) for x in range(1, 8)] + ['e1_flag.csv', 'h1_flag.csv']
-
     if not legacy:
         files = ['ox-policy-tracker/data/generated/interventions/{}'.format(i) for i in csvs]
         # !!! files = ['ox-policy-tracker/data/timeseries/{}'.format(i) for i in csvs]
@@ -39,12 +39,9 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
     for f in files:
         dat_ox = pds.read_csv(f)
         dat_ox.rename(columns={'Unnamed: 0': 'country', 'Unnamed: 1': 'country_code'}, inplace=True)
-        dat_ox.rename(columns={'CountryName': 'country', 'CountryCode': 'country_code'}, inplace=True)
+        dat_ox.rename(columns={'countryname': 'country', 'countrycode': 'country_code'}, inplace=True)
         dat_ox[dat_ox == '.'] = np.nan
-        dt_list = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:]]
-
         dat_country = dat_ox[dat_ox['country'] == country]
-
         index_country = dat_country.iloc[0, 2:].values.astype(float)
         # fill na with previous value
         index_country = numpy_fill(index_country[None, :])
@@ -63,7 +60,6 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
             dy = smooth_curve_1d(ds)
             dy_list.append(dy)
         idx = np.stack(dy_list, axis=-1)
-
     return idx
 
 
