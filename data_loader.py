@@ -29,7 +29,8 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
     ] + ['c{}_flag.csv'.format(x) for x in range(1, 8)] + ['e1_flag.csv', 'h1_flag.csv']
 
     if not legacy:
-        files = ['ox-policy-tracker/data/timeseries/{}'.format(i) for i in csvs]
+        files = ['ox-policy-tracker/data/generated/interventions/{}'.format(i) for i in csvs]
+        # !!! files = ['ox-policy-tracker/data/timeseries/{}'.format(i) for i in csvs]
     else:
         files = ['covid-policy-tracker-legacy/data/timeseries/{}'.format(i) for i in csvs]
 
@@ -38,12 +39,13 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
     for f in files:
         dat_ox = pds.read_csv(f)
         dat_ox.rename(columns={'Unnamed: 0': 'country', 'Unnamed: 1': 'country_code'}, inplace=True)
-        dat_ox[dat_ox == '.'] = 'NaN'
+        dat_ox.rename(columns={'CountryName': 'country', 'CountryCode': 'country_code'}, inplace=True)
+        dat_ox[dat_ox == '.'] = np.nan
         dt_list = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:]]
 
         dat_country = dat_ox[dat_ox['country'] == country]
 
-        index_country = dat_country.iloc[0, 2:].values.astype(np.float)
+        index_country = dat_country.iloc[0, 2:].values.astype(float)
         # fill na with previous value
         index_country = numpy_fill(index_country[None, :])
         # handle the case of initial zeros
@@ -75,7 +77,8 @@ def smooth_curve_1d(x):
 def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, rebuttal=False):
     # get time series
     if not legacy:
-        file = 'ts-data/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
+        file = 'ox-policy-tracker/data/generated/WHO-COVID-19-generated_cumulative.csv'
+       # !!!    file = 'ts-data/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
     else:
         file = 'COVID-19-legacy/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
 
@@ -136,12 +139,13 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
 
     # get oxford index
     if not legacy:
-        dat_ox = pds.read_csv('ox-policy-tracker/data/timeseries/stringencyindex_legacy.csv')
+        dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndex-generated.csv')
+        # !!! dat_ox = pds.read_csv('ox-policy-tracker/data/timeseries/stringencyindex_legacy.csv')
     else:
         dat_ox = pds.read_csv('covid-policy-tracker-legacy/data/timeseries/stringencyindex_legacy.csv')
     dat_ox.rename(columns={'Unnamed: 0': 'country', 'Unnamed: 1': 'country_code'}, inplace=True)
     dt_list_ind = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:]]
-    dat_ox[dat_ox == '.'] = 'NaN'
+    dat_ox[dat_ox == '.'] = np.nan
     if country == 'US':
         o_country = 'United States'
     elif country == 'Korea, South':
@@ -150,7 +154,7 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
         o_country = country
     dat_country = dat_ox[dat_ox['country'] == o_country]
     # 7d mv smooth
-    index_country = dat_country.iloc[0, 2:].values.astype(np.float)
+    index_country = dat_country.iloc[0, 2:].values.astype(float)
     ind_len = len(index_country)
     index_country = smooth_curve_1d(index_country)[:ind_len]
     index_country[np.isnan(index_country)] = np.nanmean(index_country)
