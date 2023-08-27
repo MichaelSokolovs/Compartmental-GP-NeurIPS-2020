@@ -1,0 +1,417 @@
+C:\Users\elavl\AppData\Local\Programs\Python\Python39\python.exe C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\seir-loop.py
+C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\data_loader.py:253: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
+  dat_feat = country_feat.pivot('country', 'metric', 'value')
+running with seed 0
+step    0 loss = 3.96194e+07
+C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\optim\dct_adam.py:132: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  ..\torch\csrc\utils\python_arg_parser.cpp:882.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+step  100 loss = 191072
+step  200 loss = 180743
+step  300 loss = 160595
+step  400 loss = 143301
+step  500 loss = 224520
+step  600 loss = 101958
+step  700 loss = 98369.5
+step  800 loss = 113367
+step  900 loss = 73455.7
+step 1000 loss = 82993.8
+step 1100 loss = 47471.9
+step 1200 loss = 113509
+step 1300 loss = 44449.6
+step 1400 loss = 36396.8
+step 1500 loss = 25439.4
+step 1600 loss = 26713.9
+step 1700 loss = 23452.3
+step 1800 loss = 17267.7
+step 1900 loss = 17301.1
+('United Kingdom', 213.34741912539567, 2670.10683742549)
+('Italy', 73.90420114748423, 837.5979776911705)
+('Germany', 75.43458246392403, 941.43591669555)
+('Spain', 161.03226317644916, 2011.9633609039033)
+('US', 811.7044522081655, 11147.511816603823)
+('France', 283.90239649656144, 3643.233132924085)
+('Belgium', 82.47513863606365, 999.9661376045326)
+('Korea, South', 3.8524752951277965, 48.72283929767303)
+('Brazil', 1001.7728925365602, -12365.913129338518)
+('Iran', 60.19220002209869, -653.3953691990591)
+('Netherlands', 72.94848584793908, 919.1166439128955)
+('Canada', 63.90513579633733, 775.5477407474821)
+('Turkey', 69.7097170284657, 873.5096343405942)
+('Romania', 1.367076953444186, -10.55936632737206)
+('Portugal', 11.837266379772029, 142.40464222555514)
+('Sweden', 59.32446057623344, 731.7659498501995)
+('Switzerland', 18.091573880000674, 226.88534792283886)
+('Ireland', 23.84749883034056, 303.0557625856913)
+('Hungary', 7.948819612690838, 101.10396647905414)
+('Denmark', 9.910348475004799, 124.13107326744199)
+('Austria', 10.090768456278157, 127.22046082595018)
+('Mexico', 257.756734906071, -2979.714119737062)
+('India', 1744.9173739967566, 20520.193827645802)
+('Ecuador', 23.50651758586502, -300.1226634570571)
+('Russia', 113.08186643356281, -1326.1994133692028)
+('Peru', 176.48743198123324, -2265.7272278388846)
+('Indonesia', 57.85136920685165, -717.4385985658913)
+('Poland', 10.116359648420346, -122.63846496931006)
+('Philippines', 16.719101822989042, -43.454697612978464)
+('Japan', 5.193818533379298, 67.2646741618836)
+('Pakistan', 205.29901966750649, 2577.3735048245553)
+running with seed 1
+step    0 loss = 643916
+step  100 loss = 194157
+step  200 loss = 251649
+step  300 loss = 133976
+step  400 loss = 109554
+step  500 loss = 97020.4
+step  600 loss = 86528.9
+step  700 loss = 84270.9
+step  800 loss = 56349.8
+step  900 loss = 148122
+step 1000 loss = 49455
+step 1100 loss = 47989
+step 1200 loss = 36354.6
+step 1300 loss = 157189
+step 1400 loss = 41089.6
+step 1500 loss = 29007.4
+step 1600 loss = 26955.3
+step 1700 loss = 21721.9
+step 1800 loss = 15419.2
+step 1900 loss = 111368
+('United Kingdom', 89.27101921849625, -1026.1720613264479)
+('Italy', 135.78667100997706, 1624.514703442252)
+('Germany', 70.32908432331048, 876.2304916626316)
+('Spain', 204.85149265580606, 2566.907382962258)
+('US', 404.8234602838576, -1106.2101555591944)
+('France', 229.71684998505236, 2976.307160487485)
+('Belgium', 63.98375383623923, 775.3916790905143)
+('Korea, South', 3.797923585795268, 48.966941200034)
+('Brazil', 1345.5073961173102, -16705.544707403595)
+('Iran', 208.09511837128105, -2539.483901145858)
+('Netherlands', 108.63682225472911, 1376.7788762642485)
+('Canada', 13.992951456292985, 110.45747019862057)
+('Turkey', 61.9217445725288, 771.3877651208306)
+('Romania', 14.748080381458715, 191.24738935828174)
+('Portugal', 17.188090376603416, 209.93137811044838)
+('Sweden', 102.67311712467021, 1268.2930681360613)
+('Switzerland', 34.047231315372755, 426.19021357282173)
+('Ireland', 23.579403822137476, 301.6749369003733)
+('Hungary', 10.56730817863786, 136.50912728535042)
+('Denmark', 13.120510118176139, 169.56114133081172)
+('Austria', 11.69154966659868, 148.2064944725485)
+('Mexico', 89.52287053171683, 1173.7840997590974)
+('India', 3245.10014118414, 38813.15221017658)
+('Ecuador', 53.40765545605619, -621.0244968143488)
+('Russia', 58.253962038406534, -661.3120623167974)
+('Peru', 114.02880273131652, -1521.7143589961815)
+('Indonesia', 57.64295980209865, -708.6053290896847)
+('Poland', 13.151669777639013, -170.62245909632537)
+('Philippines', 10.407210259278578, 36.4448565842867)
+('Japan', 0.8330392629386587, -8.14358764655945)
+('Pakistan', 563.5614845338313, 7070.251959599319)
+running with seed 2
+C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\trace_elbo.py:138: UserWarning: Encountered NaN: loss
+  warn_if_nan(loss, "loss")
+step    0 loss = nan
+running with seed 3
+step    0 loss = 1.86278e+08
+step  100 loss = 207559
+step  200 loss = 140732
+step  300 loss = 192451
+step  400 loss = 84288.9
+step  500 loss = 73059.8
+step  600 loss = 40758.3
+step  700 loss = 40391.7
+step  800 loss = 26340.2
+step  900 loss = 72860.2
+step 1000 loss = 17977.6
+step 1100 loss = 17010.8
+step 1200 loss = 16068.9
+step 1300 loss = 20449.1
+step 1400 loss = 11714.6
+step 1500 loss = 11632.4
+step 1600 loss = 19538.3
+step 1700 loss = 11177.8
+step 1800 loss = 14405.6
+step 1900 loss = 19874.9
+('United Kingdom', 17.43573460029965, 232.8822252434038)
+('Italy', 517.1239358047993, 6261.967447694381)
+('Germany', 61.63777831278644, 770.9933665476354)
+('Spain', 139.32560017541496, 1727.7842215422793)
+('US', 274.6901020050279, 2204.7189947462975)
+('France', 135.86000347481254, 1724.4805603741925)
+('Belgium', 107.82602719829345, 1329.1968894449703)
+('Korea, South', 4.5647337326325275, 57.50795879957849)
+('Brazil', 1012.5294287804637, -12568.375815919982)
+('Iran', 67.43173911418671, -738.5699414217461)
+('Netherlands', 69.51909114468783, 884.0531627493259)
+('Canada', 106.0671846028822, 1315.254429732555)
+('Turkey', 75.55326668370103, 951.0922398202508)
+('Romania', 15.176537856539511, 194.2991524754803)
+('Portugal', 13.746875447122283, 167.23644595709507)
+('Sweden', 69.96045937280749, 866.0849101280243)
+('Switzerland', 30.45539640185092, 382.58057757085754)
+('Ireland', 10.655032122560547, 134.93138428381957)
+('Hungary', 12.003178258901661, 154.77491911745352)
+('Denmark', 8.343287997444497, 107.14892971612937)
+('Austria', 14.918243301409223, 191.03083495663003)
+('Mexico', 543.3014831444153, 6807.120239990723)
+('India', 808.8105492601721, 10146.684581274503)
+('Ecuador', 14.720544991201587, 180.03258738567547)
+('Russia', 56.89502386530928, 660.2818587492479)
+('Peru', 303.83122786264863, 3451.4691619904115)
+('Indonesia', 29.020915494636338, -331.8739112248933)
+('Poland', 9.265873712339225, -119.25136532212281)
+('Philippines', 27.02458398841836, 287.8350922405493)
+('Japan', 5.585347000501789, 69.4419146274114)
+('Pakistan', 402.98963212300384, 4985.565748776008)
+running with seed 4
+step    0 loss = 3.1423e+08
+step  100 loss = 220160
+step  200 loss = 70986.3
+step  300 loss = 65256
+step  400 loss = 160006
+step  500 loss = 30263.9
+step  600 loss = 34574.8
+step  700 loss = 16351.5
+step  800 loss = 24674.4
+step  900 loss = 14397.6
+step 1000 loss = 23455.4
+step 1100 loss = 11523.5
+step 1200 loss = 15931.9
+step 1300 loss = 12671.4
+step 1400 loss = 21140.8
+step 1500 loss = 14491.9
+step 1600 loss = 10112.6
+step 1700 loss = 17088.3
+step 1800 loss = 9291.02
+step 1900 loss = 13847.8
+('United Kingdom', 53.71856820142487, 714.5411974001472)
+('Italy', 194.6001912961962, 2352.7661696879045)
+('Germany', 49.588627721473046, 619.2054578894184)
+('Spain', 171.28716542035104, 2152.1266745023936)
+('US', 266.26084127876, 752.9311897893422)
+('France', 396.5838978234833, 5120.17128658077)
+('Belgium', 81.85150373390245, 1010.4844998655874)
+('Korea, South', 3.0062495125197035, 36.62057505744065)
+('Brazil', 284.5866482557666, -3612.4389242033467)
+('Iran', 138.01955867451048, -1673.1700773672655)
+('Netherlands', 78.63262166761092, 992.4117648532641)
+('Canada', 104.00357563770949, 1300.864939716501)
+('Turkey', 53.33879443752243, 669.8455737849047)
+('Romania', 3.279200190248752, 40.7090417749867)
+('Portugal', 14.271338814882185, 175.08300728785323)
+('Sweden', 57.822877146307924, 723.6016785485459)
+('Switzerland', 26.438593376626365, 332.101051771758)
+('Ireland', 17.424509009460174, 221.8877488185123)
+('Hungary', 6.798177075817589, 86.53904956346322)
+('Denmark', 8.805707760228564, 110.693233254561)
+('Austria', 10.393548602536256, 131.05414091671713)
+('Mexico', 52.00991049211984, -519.7639674260645)
+('India', 1383.8481222482535, 16981.23491154264)
+('Ecuador', 13.455605933984577, 157.91501710819557)
+('Russia', 58.84466841239523, -658.6082310668739)
+('Peru', 76.12836257869661, 709.7689539940147)
+('Indonesia', 5.914973018952831, -44.22512616274446)
+('Poland', 6.923387823291274, -85.30789440974723)
+('Philippines', 16.97581778806608, 148.44582200671624)
+('Japan', 3.3054685532995474, 38.60535959333386)
+('Pakistan', 223.10012695676437, 2781.71463954705)
+running with seed 5
+step    0 loss = 703772
+step  100 loss = 190434
+step  200 loss = 193741
+step  300 loss = 75453.8
+step  400 loss = 58019.8
+step  500 loss = 58173.1
+step  600 loss = 45562.2
+step  700 loss = 35218.8
+step  800 loss = 60875
+step  900 loss = 40799.5
+step 1000 loss = 14124.6
+step 1100 loss = 31565.1
+step 1200 loss = 32240.2
+step 1300 loss = 10470.1
+step 1400 loss = 15850.5
+step 1500 loss = 11831.5
+step 1600 loss = 9122.47
+step 1700 loss = 9344.94
+step 1800 loss = 6962.53
+step 1900 loss = 10917.7
+('United Kingdom', 14.603381636884967, 181.2491053280828)
+('Italy', 78.53178919186216, 908.5718290919691)
+('Germany', 61.16560609413649, 768.3498685401372)
+('Spain', 118.4519997373789, 1492.3374749441887)
+('US', 362.99066996109843, -1500.1170140430913)
+('France', 159.9523389256932, 2042.3040713667096)
+('Belgium', 62.599923066250085, 761.520395636315)
+('Korea, South', 3.9112727252449897, 50.020609435179864)
+('Brazil', 1185.263931688357, -14781.33584421773)
+('Iran', 104.12496104861579, -1234.7015671794097)
+('Netherlands', 69.91993915134911, 892.0679637278703)
+('Canada', 15.768132333230128, 146.16975861621023)
+('Turkey', 82.24891814026566, 1040.7630442399848)
+('Romania', 14.581124256460372, 186.5427802551447)
+('Portugal', 15.523848333730534, 189.6272421516068)
+('Sweden', 47.39242856107436, 594.4076614617212)
+('Switzerland', 22.82603338045798, 287.70382608198855)
+('Ireland', 12.29327558076066, 156.54795945346297)
+('Hungary', 9.980437704371143, 129.0241817814029)
+('Denmark', 5.769853575749828, 70.32737933771631)
+('Austria', 7.730900037601301, 98.37314328229691)
+('Mexico', 127.7786414140412, -1606.8983348027105)
+('India', 238.0983500072269, 2139.346700831755)
+('Ecuador', 41.48304792913475, -534.0718545254936)
+('Russia', 60.05577408920686, -699.7823212811622)
+('Peru', 148.51320243456013, -1919.0717899204028)
+('Indonesia', 59.90575701326406, -758.5203262602598)
+('Poland', 4.688273521339347, -51.01219669134554)
+('Philippines', 18.798452429139243, 140.21358591172583)
+('Japan', 2.1566060343852915, 15.51127970168189)
+('Pakistan', 190.63543812505853, 2362.859578224272)
+running with seed 6
+step    0 loss = nan
+running with seed 7
+step    0 loss = 510970
+step  100 loss = 183037
+step  200 loss = 130403
+step  300 loss = 129046
+step  400 loss = 95411.4
+step  500 loss = 90035.1
+step  600 loss = 59476.3
+step  700 loss = 49759.8
+step  800 loss = 45919.6
+step  900 loss = 29422.1
+step 1000 loss = 31474.7
+step 1100 loss = 19980.7
+step 1200 loss = 18135.3
+step 1300 loss = 19178.8
+step 1400 loss = 17795.2
+step 1500 loss = 24836.3
+step 1600 loss = 35784.7
+step 1700 loss = 12399.8
+step 1800 loss = 15629.5
+step 1900 loss = 11767.9
+('United Kingdom', 15.22933428111801, -89.93678667337736)
+('Italy', 274.70305452365864, 3316.76932683713)
+('Germany', 42.976951572726165, 537.0332980642642)
+('Spain', 228.5267124279133, 2863.4806634619076)
+('US', 1035.4755455650768, 14055.298395600104)
+('France', 225.01566829968047, 2915.3857954922687)
+('Belgium', 57.51394981903689, 701.6570307212935)
+('Korea, South', 2.2365397577988975, 26.98621950950576)
+('Brazil', 132.70827482978305, 1452.9247306682482)
+('Iran', 137.73362743473257, -1688.9689895723077)
+('Netherlands', 80.80293661275036, 1019.874932711496)
+('Canada', 36.48560273570619, 418.1855876836401)
+('Turkey', 61.60853881822609, 779.281500855536)
+('Romania', 3.24767190704046, -36.87857434381698)
+('Portugal', 15.261409296485343, 185.63022944197363)
+('Sweden', 68.86288728271325, 830.0268465498549)
+('Switzerland', 17.26899355836528, 216.54310063699396)
+('Ireland', 17.987770896381644, 229.0032883172144)
+('Hungary', 3.972126296747052, 51.32218527341116)
+('Denmark', 8.007128223433531, 99.03506677013456)
+('Austria', 9.38532488398166, 117.89671544281306)
+('Mexico', 258.2906812351637, -3090.13061137158)
+('India', 1964.5867324247085, 25285.499981377783)
+('Ecuador', 7.5563293172667825, -22.385727026418408)
+('Russia', 37.21660409992588, 469.0506574135129)
+('Peru', 282.64680090119987, 3161.3368903964765)
+('Indonesia', 34.19820926750987, -418.5279018987743)
+('Poland', 15.14919312299862, -194.48949570944632)
+('Philippines', 24.908454219132476, 263.7385707810858)
+('Japan', 5.307031292801919, 68.39661453003306)
+('Pakistan', 220.5975815212876, 2757.057285869786)
+running with seed 8
+step    0 loss = 3.4219e+08
+step  100 loss = 161504
+step  200 loss = 80714.4
+step  300 loss = 90162.7
+step  400 loss = 60174.6
+step  500 loss = 44419.4
+step  600 loss = 40210.9
+step  700 loss = 317311
+step  800 loss = 48122.7
+step  900 loss = 37850.9
+step 1000 loss = 15959.3
+step 1100 loss = 28956.7
+step 1200 loss = 27304.4
+step 1300 loss = 16657
+step 1400 loss = 13887.3
+step 1500 loss = 15693.6
+step 1600 loss = 10971.4
+step 1700 loss = 13021
+step 1800 loss = 10834.2
+step 1900 loss = 9382.15
+('United Kingdom', 66.15524608298232, -736.2480548883832)
+('Italy', 78.77969685658896, 891.7247627389412)
+('Germany', 55.0553655042268, 687.3490968711666)
+('Spain', 64.48730606915755, 806.3173829932445)
+('US', 258.546788154151, 1374.688039413697)
+('France', 109.32400962085946, 1365.6743456938812)
+('Belgium', 44.888376690739584, 545.0792339647744)
+('Korea, South', 4.012882110477244, 51.118717682016154)
+('Brazil', 181.0253455424128, 2128.000400478868)
+('Iran', 92.05994655720096, -1069.5065138966183)
+('Netherlands', 42.27183197151723, 526.1560640996767)
+('Canada', 98.05343975865777, 1197.8820742479695)
+('Turkey', 68.66233610458877, 869.6315541505899)
+('Romania', 3.6011859296761175, 46.83048421104644)
+('Portugal', 12.294763721565262, 149.28449080557462)
+('Sweden', 43.442980979903766, 538.2300164910181)
+('Switzerland', 23.51280331984717, 294.0330228801635)
+('Ireland', 9.823031697248025, 123.34658562339685)
+('Hungary', 5.853754650291289, 73.42156723538194)
+('Denmark', 8.245270404948263, 103.30585710205725)
+('Austria', 9.961034289300787, 126.49458178002523)
+('Mexico', 401.9732919724458, 5012.161136401304)
+('India', 1516.4353297030725, 18716.225116817623)
+('Ecuador', 76.13099200572917, 969.1978901064044)
+('Russia', 17.780765094942325, -185.98940328920025)
+('Peru', 296.8286029240601, 3459.1011285174754)
+('Indonesia', 22.605580736277744, -266.93962357883163)
+('Poland', 6.490909076425006, -76.14030058133886)
+('Philippines', 35.95681340042988, 450.5713876375186)
+('Japan', 2.2354366770762724, 16.1201705546376)
+('Pakistan', 360.50884179628594, 4484.017677393299)
+running with seed 9
+step    0 loss = 1.48538e+10
+step  100 loss = 104545
+Traceback (most recent call last):
+  File "C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\seir-loop.py", line 87, in <module>
+    forecaster = Forecaster(model, Y_train, covariates_notime, learning_rate=0.01, num_steps=niter)
+  File "C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\forecast\forecaster.py", line 290, in __init__
+    loss = svi.step(data, covariates) / data.numel()
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\svi.py", line 128, in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\trace_elbo.py", line 126, in loss_and_grads
+    for model_trace, guide_trace in self._get_traces(model, guide, args, kwargs):
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\elbo.py", line 167, in _get_traces
+    yield self._get_vectorized_trace(model, guide, args, kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\elbo.py", line 147, in _get_vectorized_trace
+    return self._get_trace(self._vectorized_num_particles(model),
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\trace_elbo.py", line 52, in _get_trace
+    model_trace, guide_trace = get_importance_trace(
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\enum.py", line 47, in get_importance_trace
+    model_trace = poutine.trace(poutine.replay(model, trace=guide_trace),
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\poutine\trace_messenger.py", line 185, in get_trace
+    self(*args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\poutine\trace_messenger.py", line 165, in __call__
+    ret = self.fn(*args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\poutine\messenger.py", line 11, in _context_wrap
+    return fn(*args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\infer\elbo.py", line 135, in wrapped_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\pyro\nn\module.py", line 290, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\Users\elavl\AppData\Local\Programs\Python\Python39\lib\site-packages\torch\nn\modules\module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\forecast\forecaster.py", line 173, in forward
+    self.model(zero_data, covariates)
+  File "C:\Users\elavl\IdeaProjects\Compartmental-GP-NeurIPS-2020\pyro_model\seir_gp.py", line 69, in model
+    A = torch.cholesky(var)
+KeyboardInterrupt
+
+Process finished with exit code -1073741510 (0xC000013A: interrupted by Ctrl+C)
