@@ -1,0 +1,461 @@
+C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\Scripts\python.exe C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\seir-loop.py
+C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\data_loader.py:255: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
+  dat_feat = country_feat.pivot('country', 'metric', 'value')
+running with seed 0
+C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\pyro\optim\dct_adam.py:132: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  ..\torch\csrc\utils\python_arg_parser.cpp:882.)
+  exp_avg.mul_(beta1).add_(1 - beta1, grad)
+step    0 loss = 3.08603e+07
+step  100 loss = 193926
+step  200 loss = 166332
+step  300 loss = 153195
+step  400 loss = 119133
+step  500 loss = 211612
+step  600 loss = 88972.1
+step  700 loss = 73239
+step  800 loss = 82948.2
+step  900 loss = 49841.5
+step 1000 loss = 55353.1
+step 1100 loss = 30749
+step 1200 loss = 46033.7
+step 1300 loss = 23551.3
+step 1400 loss = 16922.2
+step 1500 loss = 17910.6
+step 1600 loss = 18601.1
+step 1700 loss = 14163.3
+step 1800 loss = 13977.3
+step 1900 loss = 14968.9
+('United Kingdom', 317.74540263583253, 3943.536722008539)
+('Italy', 257.91494941820406, 3093.1478160158554)
+('Germany', 112.54923043120195, 1395.9299482020804)
+('Spain', 187.77733874897044, 2322.089326876305)
+('US', 448.51934930218187, 5903.914106152937)
+('France', 137.20879326853347, 1744.1248629902611)
+('Belgium', 119.288557402186, 1442.8736412918972)
+('Korea, South', 5.16265286771517, 65.04627454795761)
+('Brazil', 513.7299929764926, -6250.0249800102465)
+('Iran', 117.96912083574682, -1397.6932283523756)
+('Netherlands', 60.48701905347789, 759.9404661267816)
+('Canada', 58.13387865747962, 708.8285094173664)
+('Turkey', 71.30799670549575, 892.4911976197961)
+('Romania', 11.769539403119136, 152.14716900028105)
+('Portugal', 13.911226260635805, 167.29029358492008)
+('Sweden', 28.820339410539237, 352.75656660482275)
+('Switzerland', 18.30099831923238, 227.6532181027881)
+('Ireland', 25.03239940255967, 317.2690242104846)
+('Hungary', 10.012584833474447, 127.04926066882867)
+('Denmark', 10.315112915207434, 128.725209545503)
+('Austria', 14.338619213820254, 182.3849443619249)
+('Mexico', 86.99238767283009, -632.2481927032823)
+('India', 1269.0277410126444, 15589.510571013607)
+('Ecuador', 17.8416938627823, 233.38668916858205)
+('Russia', 157.60799094552885, 1831.510357952738)
+('Peru', 165.36494978809054, 1822.4804476657628)
+('Indonesia', 6.904077774093933, 13.731270538672902)
+('Poland', 1.9949613846281613, -17.91131217576475)
+('Philippines', 19.095356359435705, 90.96113268027801)
+('Japan', 10.159834954776045, 130.12467954232582)
+('Pakistan', 240.46374387324812, 3011.409211341058)
+running with seed 1
+step    0 loss = 460684
+step  100 loss = 186946
+step  200 loss = 602575
+step  300 loss = 134856
+step  400 loss = 113329
+step  500 loss = 92883.1
+step  600 loss = 76454.9
+step  700 loss = 65830
+step  800 loss = 43022.4
+step  900 loss = 31222.7
+step 1000 loss = 27516.3
+step 1100 loss = 21002.8
+step 1200 loss = 16332.4
+step 1300 loss = 187324
+step 1400 loss = 18803.3
+step 1500 loss = 20865.2
+step 1600 loss = 23021.7
+step 1700 loss = 22114.7
+step 1800 loss = 12542.4
+step 1900 loss = 23735.6
+('United Kingdom', 81.10369549309961, 1020.5859801712722)
+('Italy', 229.72392304319501, 2766.6844007136538)
+('Germany', 145.69943223643818, 1793.290874391392)
+('Spain', 255.21691017899116, 3187.500264367753)
+('US', 407.3757716336154, -1171.113978071)
+('France', 423.15994331951777, 5470.654235009893)
+('Belgium', 94.2531618747338, 1138.287302302667)
+('Korea, South', 5.9168930753404, 75.71327088753813)
+('Brazil', 621.4159010961744, -7779.908787264871)
+('Iran', 174.3036798018913, -2120.241788527851)
+('Netherlands', 112.08470543878927, 1421.8616512603598)
+('Canada', 54.74488742692526, 642.7637612590536)
+('Turkey', 43.33063212659212, 535.9811648444045)
+('Romania', 15.056646414311093, 193.0273603033366)
+('Portugal', 22.57536840021329, 275.06697170223913)
+('Sweden', 46.9616567179727, 580.0585857525504)
+('Switzerland', 41.43727359712374, 516.7161200928264)
+('Ireland', 34.2043591937499, 434.8584087477538)
+('Hungary', 10.49647991258281, 135.03728958202328)
+('Denmark', 16.07702114463416, 205.99682471071208)
+('Austria', 15.363478347065314, 193.77118398393173)
+('Mexico', 207.89763799997164, -2384.484239673722)
+('India', 132.2263895601127, -983.9362950526356)
+('Ecuador', 36.54929174893503, 478.9598346155926)
+('Russia', 118.9011493339884, -1462.4816763531803)
+('Peru', 27.67022080477154, -204.94865895772818)
+('Indonesia', 66.40455098979801, -826.1666100733208)
+('Poland', 9.758302081207805, -125.31800769184048)
+('Philippines', 13.60025639496877, -87.86672616826337)
+('Japan', 6.652651115870352, 81.31116624012982)
+('Pakistan', 220.80462189700182, 2679.4198504232772)
+running with seed 2
+C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\pyro\infer\trace_elbo.py:138: UserWarning: Encountered NaN: loss
+  warn_if_nan(loss, "loss")
+step    0 loss = nan
+An exception occurred: cholesky_cpu: For batch 0: U(1,1) is zero, singular U.
+      Trace Shapes:
+       Param Sites:
+      Sample Sites:
+          time dist     |
+              value 174 |
+       country dist     |
+              value  31 |
+          mask dist     |
+              value  14 |
+r0_lengthscale dist     |
+              value     |
+ r0_kernel_var dist     |
+              value     |
+running with seed 3
+step    0 loss = 3.4028e+08
+step  100 loss = 240587
+step  200 loss = 117299
+step  300 loss = 101524
+step  400 loss = 51035.1
+step  500 loss = 64711.3
+step  600 loss = 25726.9
+step  700 loss = 20957.1
+step  800 loss = 19789.9
+step  900 loss = 51483
+step 1000 loss = 17021.9
+step 1100 loss = 16671.6
+step 1200 loss = 9625.67
+step 1300 loss = 10767.6
+step 1400 loss = 9602.47
+step 1500 loss = 9561.25
+step 1600 loss = 11993.2
+step 1700 loss = 8350.24
+step 1800 loss = 11471.5
+step 1900 loss = 8222.01
+('United Kingdom', 125.57526869749734, 1597.0878910205356)
+('Italy', 526.7066260682245, 6379.005878341538)
+('Germany', 129.0392904789481, 1592.0755625258487)
+('Spain', 122.78442927730235, 1507.4360197144274)
+('US', 375.28804103188827, -2870.0562825384695)
+('France', 76.49373679828734, 938.9790305658272)
+('Belgium', 148.07969689457906, 1813.3480597267956)
+('Korea, South', 4.834654262981847, 60.44448402132792)
+('Brazil', 393.60271317031464, -5021.6329537484635)
+('Iran', 119.27378743615458, -1420.0038860713194)
+('Netherlands', 56.548367593888045, 712.806363925978)
+('Canada', 97.9155044847763, 1236.212142790466)
+('Turkey', 69.92506785124377, 882.5897694316188)
+('Romania', 19.529312245613678, 244.19817034668773)
+('Portugal', 19.101911365064538, 230.8044009378588)
+('Sweden', 24.218304135334883, 294.3474479983548)
+('Switzerland', 32.96810296045725, 407.9027030294157)
+('Ireland', 15.430100071093873, 196.2907118626859)
+('Hungary', 9.52220078565378, 122.43387402753378)
+('Denmark', 15.677750952164908, 200.73792057434025)
+('Austria', 15.055011367159322, 191.8977764198841)
+('Mexico', 265.0286982877406, -3172.516819529432)
+('India', 288.88625699401865, 3617.3568284270004)
+('Ecuador', 43.16462062341352, 546.8548688337119)
+('Russia', 158.7407671073652, 1776.1720878057627)
+('Peru', 167.7694863028662, 1809.5945813883664)
+('Indonesia', 33.06353599046473, -387.1587492849811)
+('Poland', 5.249290091357908, -66.35830333102211)
+('Philippines', 20.519269591911822, 183.8063818049057)
+('Japan', 8.844029396772836, 111.85787103332531)
+('Pakistan', 279.0133270086215, 3467.0508194363947)
+running with seed 4
+step    0 loss = 3.79442e+06
+step  100 loss = 134616
+step  200 loss = 102619
+step  300 loss = 146531
+step  400 loss = 165126
+step  500 loss = 32065
+step  600 loss = 28057.9
+step  700 loss = 27038.5
+step  800 loss = 19164.2
+step  900 loss = 20066.2
+step 1000 loss = 12252.3
+step 1100 loss = 25106.3
+step 1200 loss = 18310.4
+step 1300 loss = 12888.5
+step 1400 loss = 15494.5
+step 1500 loss = 13254.5
+step 1600 loss = 14291.1
+step 1700 loss = 23994.4
+step 1800 loss = 10575.8
+step 1900 loss = 9770.13
+('United Kingdom', 78.75627323308595, 1003.3071073397477)
+('Italy', 211.0718782502529, 2563.4008905823616)
+('Germany', 130.59973810254428, 1605.6118870878997)
+('Spain', 179.87880362580202, 2217.873369421341)
+('US', 479.5503532385601, -3523.691277273945)
+('France', 298.3209371212749, 3828.8295287500323)
+('Belgium', 135.86363862701808, 1655.658060040609)
+('Korea, South', 4.177139443798246, 51.14082370690602)
+('Brazil', 555.384894411443, -7036.915168451709)
+('Iran', 179.168234037686, -2205.0061236538995)
+('Netherlands', 73.66133778052715, 928.2185680427273)
+('Canada', 117.27006204361894, 1403.5963496484403)
+('Turkey', 47.90203879882229, 603.2082639471148)
+('Romania', 19.97160875851383, 254.6626082136748)
+('Portugal', 19.235271802728068, 233.18138765839709)
+('Sweden', 35.605973666413746, 450.9426242923588)
+('Switzerland', 27.95320302231609, 348.1833700670499)
+('Ireland', 17.55617662030658, 221.5668335572463)
+('Hungary', 8.647955764869318, 110.57029521245603)
+('Denmark', 12.377300496233149, 154.82719698316373)
+('Austria', 13.24117513085907, 166.94440260130483)
+('Mexico', 557.9211791024267, -6717.984794062988)
+('India', 85.84667678136016, -1044.0164248544752)
+('Ecuador', 5.342008385409877, -10.197962805572388)
+('Russia', 124.94207941569054, 1489.12361499388)
+('Peru', 35.456065784450395, -457.6715705025272)
+('Indonesia', 21.281899127935276, -255.84238338052148)
+('Poland', 0.6956276958578649, -3.2760515788517637)
+('Philippines', 13.324269614366798, 11.876214069457717)
+('Japan', 9.63495328811558, 123.48228883974168)
+('Pakistan', 105.20843591106333, 1332.96241328164)
+running with seed 5
+step    0 loss = 1.03733e+06
+step  100 loss = 175394
+step  200 loss = 310425
+step  300 loss = 70612.8
+step  400 loss = 44693.2
+step  500 loss = 36368.4
+step  600 loss = 19773.4
+step  700 loss = 20511.5
+step  800 loss = 51510.6
+step  900 loss = 40669.9
+step 1000 loss = 18250.8
+step 1100 loss = 19252.7
+step 1200 loss = 22822.7
+step 1300 loss = 9597.21
+step 1400 loss = 9568.31
+step 1500 loss = 9571.77
+step 1600 loss = 7348.29
+step 1700 loss = 10439.4
+step 1800 loss = 16284.3
+step 1900 loss = 45603.9
+('United Kingdom', 45.42551794687434, 609.0325741136985)
+('Italy', 64.94076727834461, 750.9122575707157)
+('Germany', 121.99135842273603, 1510.7294011063893)
+('Spain', 179.90015069127352, 2245.715406243459)
+('US', 455.80074426208137, -3643.162355699693)
+('France', 148.3972650536254, 1879.372115094161)
+('Belgium', 81.31616551230152, 983.1186335721061)
+('Korea, South', 5.924859701049307, 75.17100324761222)
+('Brazil', 482.4853249050271, -6087.208232212273)
+('Iran', 87.29879431181936, -1046.7243755779255)
+('Netherlands', 72.41745853964156, 921.2068929290289)
+('Canada', 100.66509333721882, 1252.3768938555743)
+('Turkey', 32.571975651671686, 409.5367417470109)
+('Romania', 20.971277795259642, 265.48280282844513)
+('Portugal', 17.759622640792223, 216.40291161681753)
+('Sweden', 17.809333734257287, 225.7329407283656)
+('Switzerland', 31.41572347266647, 391.292559642409)
+('Ireland', 16.166524704404456, 205.29222521374737)
+('Hungary', 7.731473646421222, 99.17531880323078)
+('Denmark', 8.887270641400304, 109.64373038684761)
+('Austria', 9.780272236734605, 123.6875134174265)
+('Mexico', 305.33345406825055, -3675.3344775431906)
+('India', 435.9019628851701, -5697.577398815907)
+('Ecuador', 6.158600226552466, 68.91271907928467)
+('Russia', 75.94269751835007, -902.9730932460557)
+('Peru', 73.50060813285752, 612.917096778092)
+('Indonesia', 73.07198336324765, -929.9108263933819)
+('Poland', 3.4425153129988804, -34.79987042192789)
+('Philippines', 15.444752934612632, 37.885138398917036)
+('Japan', 8.230739418525893, 101.24010900534451)
+('Pakistan', 103.52638240171285, 1265.3745525826528)
+running with seed 6
+step    0 loss = nan
+An exception occurred: cholesky_cpu: For batch 0: U(1,1) is zero, singular U.
+      Trace Shapes:
+       Param Sites:
+      Sample Sites:
+          time dist     |
+              value 174 |
+       country dist     |
+              value  31 |
+          mask dist     |
+              value  14 |
+r0_lengthscale dist     |
+              value     |
+ r0_kernel_var dist     |
+              value     |
+running with seed 7
+step    0 loss = 521318
+An exception occurred: cholesky_cpu: For batch 0: U(1,1) is zero, singular U.
+      Trace Shapes:
+       Param Sites:
+      Sample Sites:
+          time dist     |
+              value 174 |
+       country dist     |
+              value  31 |
+          mask dist     |
+              value  14 |
+r0_lengthscale dist     |
+              value     |
+ r0_kernel_var dist     |
+              value     |
+running with seed 8
+step    0 loss = 6.80531e+07
+step  100 loss = 198544
+step  200 loss = 112434
+An exception occurred: cholesky_cpu: For batch 0: U(1,1) is zero, singular U.
+      Trace Shapes:
+       Param Sites:
+      Sample Sites:
+          time dist     |
+              value 174 |
+       country dist     |
+              value  31 |
+          mask dist     |
+              value  14 |
+r0_lengthscale dist     |
+              value     |
+ r0_kernel_var dist     |
+              value     |
+running with seed 9
+step    0 loss = 3.11166e+09
+step  100 loss = 114440
+step  200 loss = 96065.7
+step  300 loss = 180888
+step  400 loss = 37551.3
+step  500 loss = 129254
+step  600 loss = 36821.4
+step  700 loss = 18769
+step  800 loss = 24681.3
+step  900 loss = 23473.7
+step 1000 loss = 30026.9
+step 1100 loss = 22046.3
+step 1200 loss = 24904.5
+step 1300 loss = 18451.6
+step 1400 loss = 13485.9
+step 1500 loss = 17828.8
+step 1600 loss = 13029.7
+step 1700 loss = 19719.5
+step 1800 loss = 16232.6
+step 1900 loss = 11537
+('United Kingdom', 97.45142128098861, -1128.6992473837417)
+('Italy', 129.3876174715469, 1524.3921818675376)
+('Germany', 76.92898436638119, 944.2732990917247)
+('Spain', 110.64153417311066, 1360.0484066379927)
+('US', 321.1963111840891, -995.4818783506198)
+('France', 88.71084156773914, -1137.109982895442)
+('Belgium', 134.4982749473735, 1652.382889441915)
+('Korea, South', 4.358275694650948, 53.2808390383959)
+('Brazil', 942.7486953699728, 10529.142551946901)
+('Iran', 118.41426720741468, -1407.109330728923)
+('Netherlands', 8.292909931234908, 101.7766704721966)
+('Canada', 62.59126703711735, 749.6366624529885)
+('Turkey', 35.265985661790566, 440.4665999413863)
+('Romania', 7.603147875687655, 97.07294537700483)
+('Portugal', 3.6256734807491773, 35.79007467310137)
+('Sweden', 9.654572912572066, 105.49190089345174)
+('Switzerland', 19.272246611570118, 242.0245081161992)
+('Ireland', 9.571209598674018, 120.40532349855751)
+('Hungary', 7.218766555701169, 93.0134902831327)
+('Denmark', 8.681453054191413, 106.48688778466357)
+('Austria', 8.818224552056623, 110.55687138748955)
+('Mexico', 587.1833139725986, 7349.427739251707)
+('India', 592.2885932719485, -7734.582216610187)
+('Ecuador', 37.86492453860901, 488.0625032727953)
+('Russia', 170.34462357847167, 1997.60372555582)
+('Peru', 974.2980513402941, 11723.78468458302)
+('Indonesia', 6.444056565634847, 3.154652152838821)
+('Poland', 1.0164866788014182, 12.238179055938247)
+('Philippines', 16.216610813490313, 168.84477802557745)
+('Japan', 3.2541387907252166, 38.39164707549715)
+('Pakistan', 1154.6846281591888, 14398.962390175519)
+running with seed 10
+step    0 loss = 5.56007e+08
+step  100 loss = 196674
+step  200 loss = 215423
+step  300 loss = 118294
+step  400 loss = 102153
+step  500 loss = 98649.3
+step  600 loss = 65032.9
+step  700 loss = 2.78887e+06
+step  800 loss = 34112.3
+step  900 loss = 40943.3
+step 1000 loss = 397867
+step 1100 loss = 24875.7
+step 1200 loss = 17914.2
+step 1300 loss = 16985
+step 1400 loss = 20283.4
+step 1500 loss = 18707.9
+step 1600 loss = 18474.1
+step 1700 loss = 28472.7
+step 1800 loss = 18588
+step 1900 loss = 23353.3
+('United Kingdom', 203.81539073347807, 2514.2847365899725)
+('Italy', 284.63200496863254, 3423.3499865751296)
+('Germany', 242.45137161524488, 2929.3614066819573)
+('Spain', 127.95703007683525, 1460.3247299675445)
+('US', 688.2822629968873, -6016.995493063798)
+('France', 139.2981966198792, -1804.004581897144)
+('Belgium', 158.50344008679517, 1928.3180387315072)
+('Korea, South', 7.673360357711019, 97.54652994136819)
+('Brazil', 827.9589867064491, -10573.428070535174)
+('Iran', 116.70907337050785, -1381.3710444790422)
+('Netherlands', 50.63343465022515, 628.2353150655375)
+('Canada', 13.10339390845311, 52.85610687232503)
+('Turkey', 32.41755575505852, 399.95619373997744)
+('Romania', 5.0843101777073, 62.61275851050624)
+('Portugal', 19.101730874825837, 229.8001377515499)
+('Sweden', 23.15112219202375, 278.8921565197194)
+('Switzerland', 39.87789519465481, 492.8606353309627)
+('Ireland', 15.735771412321268, 197.5377199099285)
+('Hungary', 7.668387401234583, 98.59006199350604)
+('Denmark', 10.979227248459631, 137.1523024384199)
+('Austria', 10.3562829766149, 130.74707221330584)
+('Mexico', 641.8342803134846, -7756.595773261917)
+('India', 178.02762699426117, 1894.0855080478323)
+('Ecuador', 5.455161152685167, -51.8429361018334)
+('Russia', 149.13978456386533, 1673.1400983538238)
+('Peru', 152.08549489800185, -1970.4698875105678)
+('Indonesia', 31.862905242813923, -393.04908695974257)
+('Poland', 1.880433596077522, -16.386329804959985)
+('Philippines', 14.602235850824755, -70.33889796750015)
+('Japan', 4.324745521089174, 52.24382230222808)
+('Pakistan', 164.6079240287276, 2001.5542611125923)
+running with seed 11
+step    0 loss = 5.88496e+06
+step  100 loss = 106788
+step  200 loss = 38323.1
+step  300 loss = 71368
+Traceback (most recent call last):
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\seir-loop.py", line 87, in <module>
+    forecaster = Forecaster(model, Y_train, covariates_notime, learning_rate=0.01, num_steps=niter)
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\forecast\forecaster.py", line 290, in __init__
+    loss = svi.step(data, covariates) / data.numel()
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\pyro\infer\svi.py", line 128, in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\pyro\infer\trace_elbo.py", line 137, in loss_and_grads
+    surrogate_loss_particle.backward(retain_graph=self.retain_graph)
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\torch\tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "C:\Users\kgroz\IdeaProjects\Compartmental-GP-NeurIPS-2020\venv\lib\site-packages\torch\autograd\__init__.py", line 130, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+
+Process finished with exit code -1073741510 (0xC000013A: interrupted by Ctrl+C)
