@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pds
 import torch
 
+dt_num = 200
 
 def numpy_fill(arr):
     mask = np.isnan(arr)
@@ -20,17 +21,24 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
                'c3_cancelpublicevents.csv',
                'c4_restrictionsongatherings.csv',
                'c5_closepublictransport.csv',
-               'c6_stayathomerequirements.csv',
+               #'c6_stayathomerequirements.csv',
                'c7_domestictravel.csv',
                'c8_internationaltravel.csv',
                'e1_incomesupport.csv',
                'e2_debtcontractrelief.csv',
                'h1_publicinfocampaign.csv',
-               'h2_testingpolicy.csv'
-           ] + ['c{}_flag.csv'.format(x) for x in range(1, 8)] + ['e1_flag.csv', 'h1_flag.csv']
+               'h2_testingpolicy.csv',
+               'h3_contacttracing.csv',
+               'h6_facialcoverings.csv'
+           ] + ['c{}_flag.csv'.format(x) for x in (1, 2, 3, 4, 5, 7)] \
+           + [
+              'e1_flag.csv',
+              'h1_flag.csv',
+              'h6_flag.csv'
+             ]
 
     if not legacy:
-        files = ['ox-policy-tracker/data/timeseries/{}'.format(i) for i in csvs]
+        files = ['ox-policy-tracker/data/generated/interventions/{}'.format(i) for i in csvs]
     else:
         files = ['covid-policy-tracker-legacy/data/timeseries/{}'.format(i) for i in csvs]
 
@@ -39,12 +47,10 @@ def get_intervention(country, standarize=False, smooth=True, legacy=False):
     for f in files:
         dat_ox = pds.read_csv(f)
         dat_ox.rename(columns={'Unnamed: 0': 'country', 'Unnamed: 1': 'country_code'}, inplace=True)
-        dat_ox[dat_ox == '.'] = 'NaN'
-        dt_list = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:]]
-
+        dat_ox.rename(columns={'countryname': 'country', 'countrycode': 'country_code'}, inplace=True)
+        dat_ox[dat_ox == '.'] = np.nan
         dat_country = dat_ox[dat_ox['country'] == country]
-
-        index_country = dat_country.iloc[0, 2:].values.astype(np.float)
+        index_country = dat_country.iloc[0, 2:dt_num].values.astype(float)
         # fill na with previous value
         index_country = numpy_fill(index_country[None, :])
         # handle the case of initial zeros
@@ -87,28 +93,27 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
     dt_list = [datetime.strptime(x, '%m/%d/%y').date() for x in dat.columns[4:]]
 
     if country not in ['China', 'Canada']:
-        country_data = dat[(dat['Country/Region'] == country) & (dat['Province/State'].isnull())].iloc[0, 4:].values
+        country_data = dat[(dat['Country/Region'] == country) & (dat['Province/State'].isnull())].iloc[0, 4:dt_num].values
     else:
-        country_data = np.sum(dat[(dat['Country/Region'] == country)].iloc[:, 4:].values, axis=0)
+        country_data = np.sum(dat[(dat['Country/Region'] == country)].iloc[:, 4:dt_num].values, axis=0)
 
     ind = (country_data != 0).argmax() - pad
     if ind < 0:
         print(country)
         ind = 0
-    # assert ind >= 0
 
     cum_deaths = country_data[ind:].astype(np.float64)
     dt_list = dt_list[ind:]
     daily_deaths = np.diff(np.append(np.zeros(1), cum_deaths))
 
     if country == 'Philippines':
-        cum_deaths = cum_deaths[39:]
-        dt_list = dt_list[39:]
-        daily_deaths = daily_deaths[39:]
+        cum_deaths = cum_deaths[39:dt_num]
+        dt_list = dt_list[39:dt_num]
+        daily_deaths = daily_deaths[39:dt_num]
     if country == 'France':
-        cum_deaths = cum_deaths[17:]
-        dt_list = dt_list[17:]
-        daily_deaths = daily_deaths[17:]
+        cum_deaths = cum_deaths[17:dt_num]
+        dt_list = dt_list[17:dt_num]
+        daily_deaths = daily_deaths[17:dt_num]
 
     # get population
     dat_feat = pds.read_csv('country_feature/country_feats.csv')
@@ -138,8 +143,8 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
 
     # get oxford index
     if not legacy:
-        dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC5.csv')
-        # !!! dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC4.csv')
+        # !!!dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC1.csv')
+        dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC6.csv')
         # !!! dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC3.csv')
         # !!! dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC2.csv')
         # !!! dat_ox = pds.read_csv('ox-policy-tracker/data/generated/OxCGRT_StringencyIndexCustom-generated_noC1.csv')
@@ -149,9 +154,7 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
     else:
         dat_ox = pds.read_csv('covid-policy-tracker-legacy/data/timeseries/stringencyindex_legacy.csv')
     dat_ox.rename(columns={'Unnamed: 0': 'country', 'Unnamed: 1': 'country_code'}, inplace=True)
-    dt_list_ind = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:]]
-    # !!!to be commented out for custom run!
-    # !!! dat_ox[dat_ox == '.'] = 'NaN'
+    dt_list_ind = [datetime.strptime(x, '%d%b%Y').date() for x in dat_ox.columns[2:dt_num]]
     if country == 'US':
         o_country = 'United States'
     elif country == 'Korea, South':
@@ -159,10 +162,8 @@ def get_deaths(country, to_torch=False, legacy=False, smart_start=True, pad=0, r
     else:
         o_country = country
     dat_country = dat_ox[dat_ox['country'] == o_country]
-    # print("!!! o_country " + str(o_country))
-    # print("!!! " + str(dat_country))
     # 7d mv smooth
-    index_country = dat_country.iloc[0, 2:].values.astype(np.float)
+    index_country = dat_country.iloc[0, 2:dt_num].values.astype(float)
     ind_len = len(index_country)
     index_country = smooth_curve_1d(index_country)[:ind_len]
     index_country[np.isnan(index_country)] = np.nanmean(index_country)
